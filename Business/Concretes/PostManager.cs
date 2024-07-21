@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstracts;
 using Entities.Concretes;
+using Entities.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Business.Concretes
     public class PostManager : IPostService
     {
         IPostDal _postDal;
+        ILikeService _likeService;
+        ICommentService _commentService;
 
         public PostManager(IPostDal postDal)
         {
@@ -43,7 +46,7 @@ namespace Business.Concretes
 
         public IDataResult<Post> GetById(int id)
         {
-            return new SuccessDataResult<Post>(_postDal.Get(p=>p.Id==id));
+            return new SuccessDataResult<Post>(_postDal.Get(p=>p.PostId==id));
         }
 
         public Result Update(Post post)

@@ -36,6 +36,11 @@ namespace Business.Concretes
             return new SuccessDataResult<List<Like>>(_likeDal.GetAll());
         }
 
+        public IDataResult<List<Like>> GetByPostId(int postId)
+        {
+            return new SuccessDataResult<List<Like>>(_likeDal.GetAll(l=>l.PostId == postId));
+        }
+
         //public IDataResult<List<LikeDetailDto>> GetLikeDetail()
         //{
         //    return new SuccessDataResult<List<LikeDetailDto>>(_likeDal.GetLikeDetail());

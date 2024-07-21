@@ -18,9 +18,9 @@ namespace WebAPI.Controllers
 
 
         //[HttpGet("getPostdetails")]
-        //public IActionResult GetikeDetails()
+        //public IActionResult GetikeDetails(Post post,Like like,Comment comment)
         //{
-        //    var result = _postService.GetAllPostDetail();
+        //    var result = _postService.GetAllDetail(post,like,comment);
         //    if (result.Success)
         //    {
         //        return Ok(result);

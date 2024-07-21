@@ -60,6 +60,17 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+        [HttpGet("getbypostıd")]
+        public IActionResult GetByPostId(int postId)
+        {
+            var result = _likeService.GetByPostId(postId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
 
     }
 }

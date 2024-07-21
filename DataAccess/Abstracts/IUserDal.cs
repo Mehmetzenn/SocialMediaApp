@@ -1,7 +1,5 @@
 ﻿using Core.DataAccess;
-using DataAccess.Concretes;
-using Entities.Concretes;
-using Entities.Dtos;
+using Core.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstracts
 {
-    public interface IPostDal: IEntityRepository<Post>
+    public interface IUserDal : IEntityRepository<User>
     {
+        List<OperationClaim> GetClaims(User user);
     }
 }

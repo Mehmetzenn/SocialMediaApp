@@ -9,9 +9,9 @@ namespace Entities.Concretes
 {
     public class Like : IEntity
     {
-        public int Id { get; set; }
-        public int UserId { get; set; }
+        public int LikeId { get; set; }
         public int PostId { get; set; }
-        public DateTime LikedDate { get; set; }
+        public int UserId { get; set; }
+
     }
 }

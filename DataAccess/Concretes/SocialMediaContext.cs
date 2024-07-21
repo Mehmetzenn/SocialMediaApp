@@ -19,7 +19,7 @@ namespace DataAccess.Concretes
         public DbSet<Like> likes { get; set; }
         public DbSet<Comment> comments { get; set; }
         public DbSet<Post> posts { get; set; }
-        public DbSet<OperationClaim> operationsclaims { get; set; }
+        public DbSet<OperationClaim> Operationclaims { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
     }

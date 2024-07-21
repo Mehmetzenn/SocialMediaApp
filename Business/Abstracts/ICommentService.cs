@@ -13,6 +13,6 @@ namespace Business.Abstracts
         Result Add(Comment comment);
         Result Delete(Comment comment);
         IDataResult<List<Comment>> GetAll();
-        //IDataResult<List<CommentDetailDto>> GetCommentDetail();
+        IDataResult<List<Comment>> GetByPostId(int postId);
     }
 }
